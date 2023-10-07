@@ -59,6 +59,11 @@ def calc_All(d, i_v, f_v, t, a):
             print("Not enough information known")
         else:
             print(calc_Distance(i_v, f_v, t, a))
+    if i_v == "u":
+        if calc_Initial_Velocity == None:
+            print("Not enough information known")
+        else:
+            print(calc_Initial_Velocity(d, f_v, t, a))
 
 def calc_Distance(i_v, f_v, t, a):
     if i_v != "u" and f_v != "u" and time != "u":
