@@ -71,6 +71,15 @@ def calc_Distance(i_v, f_v, t, a):
         return None
     
 def calc_Initial_Velocity(d, f_v, t, a):
-    None
+    if f_v != "u" and a != "u" and t != "u":
+        return float(f_v) - float(a) * float(t)
+    elif f_v != "u" and a != "u" and d != "u":
+        return float(f_v) ** 2 - 2 * float(a) * float(d)
+    elif  f_v != "u" and d != "u" and t != "u":
+        return 2 * float(d) / float(t) - float(f_v)
+    elif d != "u" and t != "u" and a != "u":
+        return (float(d) - .5 * float(a) * float(t))
+    else: 
+        return None 
 
 input_Vals()
